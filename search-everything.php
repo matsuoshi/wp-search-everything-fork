@@ -214,7 +214,9 @@ class SearchEverything {
 
 		add_filter( 'posts_request', array( &$this, 'se_distinct' ) );
 
-		add_filter( 'posts_where', array( &$this, 'se_no_future' ) );
+		if( ! is_admin() ) {
+			add_filter( 'posts_where', array( &$this, 'se_no_future' ) );
+		}
 
 		add_filter( 'posts_request', array( &$this, 'se_log_query' ), 10, 2 );
 	}
