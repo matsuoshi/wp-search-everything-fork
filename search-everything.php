@@ -926,9 +926,11 @@ function se_post_publish_ping($post_id) {
 			'deployment' => 'search-everything',
 			'format' => 'json'
 		));
-	  $response = json_decode($zemanta_response['body']);
-		if (isset($response->status) && !is_wp_error($zemanta_response)) {
-			$status = $response->status;
+		if (!is_wp_error($zemanta_response)) {
+			$response = json_decode($zemanta_response['body']);
+			if (isset($response->status)) {
+				$status = $response->status;
+			}
 		}
 	}
 	return $status;
