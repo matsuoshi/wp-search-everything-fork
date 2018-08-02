@@ -42,8 +42,8 @@ Installation Instructions:
 3. Go to the Plugins page in your WordPress Administration area and click 'Activate' next to Search Everything.
 4. Go to the Options >  Search Everything and configure your settings.
 5. That's it. Have fun and if you can contribute (see notes).
-	
-	
+
+
 Frequently Asked Questions
 --------------------------
 
@@ -61,6 +61,7 @@ What Translations are included?
 * Arabic
 * Belarusian
 * China / Chinese
+* Czech
 * Dutch
 * French
 * German
